@@ -5,6 +5,7 @@ import com.service.model.User;
 import com.service.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -58,7 +59,7 @@ public class UserController {
    * @return the user
    */
   @PostMapping("/users")
-  public User createUser(@RequestBody User user) {
+  public User createUser(@Validated  @RequestBody User user) {
     return userRepository.saveAndFlush(user);
   }
 
