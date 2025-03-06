@@ -59,7 +59,7 @@ public class UserController {
    */
   @PostMapping("/users")
   public User createUser(@RequestBody User user) {
-    return userRepository.save(user);
+    return userRepository.saveAndFlush(user);
   }
 
   /**
