@@ -96,7 +96,7 @@ public class UserController {
    * @return the map
    * @throws Exception the exception
    */
-  @DeleteMapping("/user/{id}")
+  @DeleteMapping("/users/{id}")
   public Map<String, Boolean> deleteUser(@PathVariable(value = "id") Long userId) throws Exception {
     User user =
         userRepository
